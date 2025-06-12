@@ -19,7 +19,7 @@ const Home = () => {
   const [panelOpen, setPanelOpen] = useState(false);
   const vehiclePanelRef = useRef(null);
   const confirmRidePanelRef = useRef(null);
-  const panelRef = React.useRef(null);
+  const panelRef = useRef(null);
   const panelCloseRef = useRef(null);
   const vehicleFoundRef = useRef(null);
   const waitingForDriverRef = useRef(null)
