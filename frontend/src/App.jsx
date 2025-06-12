@@ -12,6 +12,7 @@ import CaptainHome from './pages/CaptainHome.jsx'
 import CaptainProtectWrapper from './pages/CaptainProtectWrapper.jsx'
 import Riding from './pages/Riding.jsx'
 import CaptainRiding from './pages/CaptainRiding.jsx'
+import 'remixicon/fonts/remixicon.css';
 
 const App = () => {
   return (
