@@ -6,9 +6,9 @@ const {query} = require('express-validator')
 
 
 
-router.get('/get-cordinates',
+router.get('/get-coordinates',
     query('address').isString().isLength({min:3}),
-    authMiddleware.authUser,mapController.getCordinates)
+    authMiddleware.authUser,mapController.getCoordinates)
 
 
 

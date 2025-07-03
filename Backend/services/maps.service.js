@@ -1,10 +1,10 @@
 const axios = require('axios');
 
-module.exports.getAddressCordinates = async(address)=>{
+module.exports.getAddressCoordinate = async(address)=>{
      const apiKey = process.env.GOOGLE_MAPS_API;
     const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(address)}&key=${apiKey}`;
 
-    // console.log("Final API URL:", url); // To inspect what URL   hitting
+    console.log("Final API URL:", url); // To inspect what URL   hitting
     try {
 
         const response = await axios.get(url);
@@ -15,7 +15,8 @@ module.exports.getAddressCordinates = async(address)=>{
                 lng: location.lng
             };
         } else {
-        //    console.error("Geocoding API failed:", response.data);
+
+               console.log("Geocoding response:", response.data);
              throw new Error('Unable to fetch coordinates');
         }
     } catch (error) {

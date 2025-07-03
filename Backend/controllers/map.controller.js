@@ -3,7 +3,7 @@ const{validationResult} = require('express-validator');
 
 
 
-module.exports.getCordinates = async(req,res,next)=>{
+module.exports.getCoordinates = async(req,res,next)=>{
    
     const errors = validationResult(req)
     if(!errors.isEmpty()){
@@ -16,9 +16,9 @@ module.exports.getCordinates = async(req,res,next)=>{
 
     try {
         // console.log(address)
-        const cordinates = await mapService.getAddressCordinates(address);
+        const cordinates = await mapService.getAddressCoordinate(address);
         res.status(200).json(cordinates)
     } catch (error) {
-        res.status(404).json({message:'Cordinates not found'})
+        res.status(404).json({message:'Coordinates not found'})
     }
 }
